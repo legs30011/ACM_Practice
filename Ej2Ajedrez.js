@@ -36,3 +36,21 @@ Sample Output
 6
 32
 */
+
+function ajedrez(type,m,n){
+    switch(type){
+        case 't': Math.min(m,n);
+        case 'c': Math.ceil((m*n)/2);
+        case 'r': Math.min(m,n);
+        case 'rey':Math.ceil(m/2)*Math.ceil(n/2);
+        default:
+            return 0;
+    }
+}
+
+const input = `2
+r 6 7
+k 8 8`;
+
+const results = processInput(input);
+results.forEach(result => console.log(result));
